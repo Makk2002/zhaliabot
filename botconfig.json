@@ -1,0 +1,21 @@
+{
+  "token": "NTUxMTg4MjM5OTQwMTkwMjE4.D1v0iw.E2cTi1BAarOVVwnmMLTAaL9M9EA",
+  "ownerID": "269553171595001857",
+  "prefix": ">",
+  "build": {
+      "version": "1.0",
+      "releaseDate": "TBD"
+  },
+  "owner": {
+      "channels": {
+          "award": "<CHANNEL_ID>",
+          "report": "<CHANNEL_ID"
+      },
+      "awards": {
+          "suggest": 250,
+          "bug": 500,
+          "minor": 600,
+          "major": 2000
+      }
+  }
+}
