@@ -33,7 +33,10 @@ bot.on("message", async message => {
 
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
-
+  let prefix = botconfig.prefix;
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
   let xpAdd = Math.floor(Math.random() * 8) + 15;
 
   if(!xp[message.author.id]){
