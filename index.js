@@ -33,10 +33,7 @@ bot.on("message", async message => {
 
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
-  let prefix = botconfig.prefix;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
+
   let xpAdd = Math.floor(Math.random() * 8) + 15;
 
   if(!xp[message.author.id]){
@@ -63,15 +60,11 @@ bot.on("message", async message => {
   fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
     if(err) console.log(err)
   });
-
-  let prefix = prefixes[message.guild.id].prefixes;
+  
+  let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
-
 });
 
 bot.login(process.env.BOT_TOKEN);
